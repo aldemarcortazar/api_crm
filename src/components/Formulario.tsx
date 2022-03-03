@@ -44,7 +44,7 @@ const Formulario: React.FunctionComponent<IformProps> = ({ client, loading }) =>
     const handleSubmit = async ( values: Iuser) => {
         try{
 
-            const url:string = `http://localhost:4000/clientes/${ client?.id ? client.id : '' }`;
+            const url:string = `${import.meta.env.VITE_API_URL}/${ client?.id ? client.id : '' }`;
             const options: RequestInit = {
                 method: `${ client?.id ? 'PUT': 'POST' }`,
                 body: JSON.stringify( values ) ,

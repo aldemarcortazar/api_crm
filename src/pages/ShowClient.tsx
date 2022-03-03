@@ -18,7 +18,7 @@ const ShowClient: React.FunctionComponent<ishowCliente> = () => {
         const getClientApi = async () => {
             try{
 
-                const url:string = `http://localhost:4000/clientes/${id}`;
+                const url:string = `${ import.meta.env.VITE_API_URL }/${id}`;
                 const answer: Response = await fetch( url );
                 const result: Iuser    = await answer.json();
                 setClient( result );

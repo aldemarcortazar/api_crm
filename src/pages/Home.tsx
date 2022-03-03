@@ -16,8 +16,8 @@ const Home: React.FunctionComponent<IhomeProps> = () => {
 
         const getClientsApi = async () => {
             try{
-                const url: string = 'http://localhost:4000/clientes';
-                const answer  = await fetch( url );
+                const url: string | boolean | undefined = import.meta.env.VITE_API_URL;
+                const answer  = await fetch( url?.toString()|| '' );
                 const result: Iuser[] = await answer.json();
 
                 setClientes( result );
@@ -36,7 +36,7 @@ const Home: React.FunctionComponent<IhomeProps> = () => {
         if( !answer ) return;
 
         try{
-            const url: string = `https://localhost:4000/clientes/${ id }`;
+            const url: string = `${ import.meta.env.VITE_API_URL }/${ id }`;
             const question: Response = await fetch( url, {
                 method: 'DELETE'
             } );

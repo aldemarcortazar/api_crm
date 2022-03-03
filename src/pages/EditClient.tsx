@@ -17,7 +17,7 @@ const EditClient: React.FunctionComponent<IeditClientProps> = () => {
 
         const getClient = async () => {
             try{
-                const url: string = `http://localhost:4000/clientes/${ id }`;
+                const url: string = `${import.meta.env.VITE_API_URL}/${ id }`;
                 // http://localhost:4000/clientes/${id}
                 const response: Response = await fetch(url);
                 const data: Iuser = await  response.json();
