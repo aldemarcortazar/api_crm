@@ -1,0 +1,28 @@
+{
+  "clientes": [
+    {
+      "name": "Aldemar ",
+      "empresa": "Aldemar ",
+      "email": "anino79@gmail.com.bn",
+      "phone": "3222708870",
+      "notas": "quiero mimir y aprender mucho",
+      "id": 1
+    },
+    {
+      "name": "Aldemar niño cor",
+      "empresa": "Aldemar ",
+      "email": "niocortazar25aldemar@gmail.com",
+      "phone": "3222708870",
+      "notas": "anino79@misena.edu.co",
+      "id": 2
+    },
+    {
+      "name": "pepe",
+      "empresa": "pepe@pepepe",
+      "email": "pepe@gmail.com",
+      "phone": "3222708870",
+      "notas": "holaaa",
+      "id": 3
+    }
+  ]
+}
